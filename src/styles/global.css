@@ -1,8 +1,16 @@
+:root {
+  --primary: #0B5ED7;
+  --dark: #0A2540;
+  --bg: #F8FAFC;
+  --card: #FFFFFF;
+  --muted: #64748B;
+}
+
 body {
   margin: 0;
   font-family: Inter, system-ui, sans-serif;
+  background: var(--bg);
   color: #1E293B;
-  background: #F8FAFC;
 }
 
 .container {
@@ -11,19 +19,47 @@ body {
   padding: 80px 24px;
 }
 
-h1, h2, h3 {
-  color: #0A2540;
+h1 {
+  font-size: 48px;
+  color: var(--dark);
+  margin-bottom: 16px;
+}
+
+h2 {
+  font-size: 32px;
+  margin-bottom: 12px;
+}
+
+p {
+  color: var(--muted);
+  max-width: 640px;
+  line-height: 1.6;
 }
 
 a {
   text-decoration: none;
-  color: inherit;
 }
 
 .button {
-  background: #0B5ED7;
+  background: var(--primary);
   color: white;
-  padding: 12px 20px;
-  border-radius: 6px;
+  padding: 14px 24px;
+  border-radius: 8px;
+  font-weight: 500;
   display: inline-block;
+}
+
+.button.secondary {
+  background: transparent;
+  border: 1px solid var(--primary);
+  color: var(--primary);
+}
+
+.card {
+  background: white;
+  padding: 32px;
+  border-radius: 16px;
+  font-weight: 600;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.04);
+  text-align: center;
 }

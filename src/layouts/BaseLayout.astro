@@ -10,23 +10,28 @@ import "../styles/global.css";
   </head>
 
   <body>
-    <header class="container">
-      <nav style="display:flex; justify-content:space-between;">
-        <strong>Sanzyme Biologics</strong>
-        <div>
-          <a href="/">Home</a> |
-          <a href="/products">Products</a> |
-          <a href="/contact">Contact</a>
-        </div>
-      </nav>
+    <header style="background:white; border-bottom:1px solid #e5e7eb;">
+      <div class="container" style="padding:24px;">
+        <nav style="display:flex; justify-content:space-between; align-items:center;">
+          <strong style="font-size:20px; color:#0A2540;">Sanzyme Biologics</strong>
+
+          <div style="display:flex; gap:24px;">
+            <a href="/">Home</a>
+            <a href="/products">Products</a>
+            <a href="/contact">Contact</a>
+          </div>
+        </nav>
+      </div>
     </header>
 
     <main>
       <slot />
     </main>
 
-    <footer class="container">
-      <p>© 2026 Sanzyme Biologics</p>
+    <footer style="background:#0A2540; color:white;">
+      <div class="container">
+        <p style="color:#CBD5E1;">© 2026 Sanzyme Biologics</p>
+      </div>
     </footer>
   </body>
 </html>

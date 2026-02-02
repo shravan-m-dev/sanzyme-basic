@@ -4,12 +4,23 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 
 <BaseLayout>
   <section class="container">
-    <h1>Our Products</h1>
+    <h1>Our Probiotic Strains</h1>
 
-    <ul>
-      <li><strong>Bacillus coagulans SNZ 1969®</strong></li>
-      <li><strong>Bacillus subtilis SNZ 1972™</strong></li>
-      <li><strong>Saccharomyces boulardii SNZ 1986™</strong></li>
-    </ul>
+    <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:24px; margin-top:48px;">
+      <div class="card">
+        <h3>Bacillus coagulans</h3>
+        <p>High stability, shelf-stable probiotic strain.</p>
+      </div>
+
+      <div class="card">
+        <h3>Bacillus subtilis</h3>
+        <p>Widely used for gut health applications.</p>
+      </div>
+
+      <div class="card">
+        <h3>Saccharomyces boulardii</h3>
+        <p>Clinically documented yeast probiotic.</p>
+      </div>
+    </div>
   </section>
 </BaseLayout>
