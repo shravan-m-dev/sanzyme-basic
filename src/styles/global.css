@@ -1,0 +1,29 @@
+body {
+  margin: 0;
+  font-family: Inter, system-ui, sans-serif;
+  color: #1E293B;
+  background: #F8FAFC;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 80px 24px;
+}
+
+h1, h2, h3 {
+  color: #0A2540;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.button {
+  background: #0B5ED7;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 6px;
+  display: inline-block;
+}

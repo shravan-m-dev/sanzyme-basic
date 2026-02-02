@@ -1,0 +1,32 @@
+---
+import "../styles/global.css";
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Sanzyme Biologics</title>
+  </head>
+
+  <body>
+    <header class="container">
+      <nav style="display:flex; justify-content:space-between;">
+        <strong>Sanzyme Biologics</strong>
+        <div>
+          <a href="/">Home</a> |
+          <a href="/products">Products</a> |
+          <a href="/contact">Contact</a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <slot />
+    </main>
+
+    <footer class="container">
+      <p>© 2026 Sanzyme Biologics</p>
+    </footer>
+  </body>
+</html>
