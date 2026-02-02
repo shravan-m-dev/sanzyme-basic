@@ -63,3 +63,24 @@ a {
   box-shadow: 0 8px 24px rgba(0,0,0,0.04);
   text-align: center;
 }
+
+.wp-content p {
+  font-size: 18px;
+  line-height: 1.7;
+  color: #475569;
+  margin-bottom: 20px;
+}
+
+.wp-content blockquote {
+  border-left: 4px solid #0B5ED7;
+  padding-left: 16px;
+  margin: 24px 0;
+  color: #334155;
+}
+
+.wp-content h2,
+.wp-content h3 {
+  margin-top: 40px;
+  color: #0A2540;
+}
+
