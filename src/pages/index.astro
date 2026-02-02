@@ -1,36 +1,23 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+
+const res = await fetch(
+  "https://public-api.wordpress.com/wp/v2/sites/shravandesign4.wordpress.com/pages"
+);
+
+const pages = await res.json();
+const page = pages.find(p => p.slug === "homes");
 ---
 
 <BaseLayout>
-  <!-- HERO -->
-  <section class="container" style="display:grid; grid-template-columns:1fr 1fr; gap:48px;">
-    <div>
-      <h1>Science-Backed Probiotic Solutions</h1>
-      <p>
-        50+ years of fermentation expertise delivering probiotics,
-        enzymes, and contract manufacturing services worldwide.
-      </p>
-
-      <div style="margin-top:32px; display:flex; gap:16px;">
-        <a class="button" href="/products">Explore Products</a>
-        <a class="button secondary" href="/contact">Partner With Us</a>
-      </div>
-    </div>
-
-    <div style="background:white; border-radius:16px; height:320px;
-                box-shadow:0 10px 30px rgba(0,0,0,0.05);">
-      <!-- image later -->
-    </div>
-  </section>
-
-  <!-- TRUST STATS -->
-  <section class="container" style="padding-top:0;">
-    <div style="display:grid; grid-template-columns:repeat(4,1fr); gap:24px;">
-      <div class="card">50+ Years Experience</div>
-      <div class="card">GMP & ISO Certified</div>
-      <div class="card">Global Distribution</div>
-      <div class="card">Advanced R&D</div>
-    </div>
+  <section class="container wp-content">
+    {page ? (
+      <>
+        <h1 set:html={page.title.rendered} />
+        <div set:html={page.content.rendered} />
+      </>
+    ) : (
+      <p>Home page not found from WordPress CMS.</p>
+    )}
   </section>
 </BaseLayout>
